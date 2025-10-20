@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive map of 55 social services in Charles Hill, Harlem">
+    <title>Charles Hill Social Services Map</title>
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Charles Hill Social Services</div>
+            <div class="nav-links">
+                <a href="#map">Map</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Charles Hill Social Services Map</h1>
+            <p class="subtitle">Find essential services in your community</p>
+            <a href="#map" class="cta-button">Explore the Map</a>
+        </div>
+    </section>
+
+    <!-- Main Map Section -->
+    <section id="map-section">
+        <div class="map-container">
+            <div id="map"></div>
+            
+            <!-- Legend -->
+            <div class="legend">
+                <h4>Service Types</h4>
+                <div id="legend-items"></div>
+            </div>
+
+            <!-- Info Panel -->
+            <div class="info-panel" id="info-panel">
+                <button class="close-btn" id="close-panel">×</button>
+                <h3 id="service-name"></h3>
+                <p id="service-address"></p>
+                <p id="service-category"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Directory Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Browse All Services</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-category="all">All (55)</button>
+                <button class="filter-btn" data-category="health">Health (7)</button>
+                <button class="filter-btn" data-category="food">Food (8)</button>
+                <button class="filter-btn" data-category="education">Education (9)</button>
+                <button class="filter-btn" data-category="government">Government (6)</button>
+                <button class="filter-btn" data-category="safety">Legal (5)</button>
+                <button class="filter-btn" data-category="financial">Financial (8)</button>
+                <button class="filter-btn" data-category="community">Community (7)</button>
+                <button class="filter-btn" data-category="postal">Postal (5)</button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About This Project</h2>
+            <p>This interactive map documents 55 essential social service locations in the Charles Hill neighborhood of Harlem, New York.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">55</div>
+                    <div class="stat-label">Services Mapped</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Community Focused</div>
+                </div>
+            </div>
+
+            <h3>Categories Include:</h3>
+            <ul class="category-list">
+                <li>Medical & Health Services</li>
+                <li>Food Pantries & Meal Programs</li>
+                <li>Education & Youth Programs</li>
+                <li>Government Offices</li>
+                <li>Legal Services</li>
+                <li>Financial Services</li>
+                <li>Community Organizations</li>
+                <li>Postal Services</li>
+            </ul>
+
+            <h3>Data Sources</h3>
+            <p>Information compiled from NYC Open Data, community surveys, government directories, and on-the-ground verification.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Charles Hill Social Services Map</p>
+            <p>Built with Leaflet.js • Data verified October 2025</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
